@@ -1,0 +1,14 @@
+<h1>Articles</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <a href="<%= article_path(article) %>">
+        <%= article.title %>
+       <p> <%= article.body %> </p>
+
+      </a>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'Create New User',new_article_path %>
