@@ -7,11 +7,18 @@
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
+<%# handling validation on name %> 
+  <% if @user.errors.present? %>
+  <%= @user.errors.full_messages %>
+  <% end %>
 
   <div class="field">
     <%= form.label :email %>
     <%= form.email_field :email %>
   </div>
+
+  <%# <%= if%> 
+  
 
   <div class="actions">
     <%= form.submit 'Create User' %>
